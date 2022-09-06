@@ -11,9 +11,11 @@ const log = console.log;
 
 if (process.argv[2] && process.argv[3]) {
   hexCode = randomColor({ hue: color, luminosity: saturated });
-} else {
+} else if (process.argv[2]) {
   hexCode = randomColor({ hue: color });
-}
+} else {
+  hexCode = randomColor();
+
 
 const element = `  ################################
   ################################
