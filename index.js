@@ -28,4 +28,3 @@ const element = `  ################################
 log(chalk.hex(hexCode)(element));
 // console.log(argv[2], argv[3]);
 
-// console.log(randomColor(myName));
