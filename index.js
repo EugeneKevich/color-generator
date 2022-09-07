@@ -4,28 +4,28 @@ import { argv } from 'node:process';
 import chalk from 'chalk';
 import randomColor from 'randomcolor';
 
-let hexCode;
-const color = process.argv[2];
-const saturated = process.argv[3];
 const log = console.log;
 
-if (process.argv[2] && process.argv[3]) {
-  hexCode = randomColor({ hue: color, luminosity: saturated });
-} else {
-  hexCode = randomColor({ hue: color });
-}
+/* const hexColor = randomColor({
+  hue: 'red',
+  luminosity: 'dark',
+}); */
+
+const hexColor = randomColor({
+  hue: process.argv[2],
+  luminosity: process.argv[3],
+});
 
 const element = `  ################################
   ################################
   ################################
   #####                      #####
-  #####       ${hexCode}        #####
+  #####       ${hexColor}        #####
   #####                      #####
   ################################
   ################################
   ################################`;
 
-log(chalk.hex(hexCode)(element));
-// console.log(argv[2], argv[3]);
+// console.log(hexColor);
 
-// console.log(randomColor(myName));
+log(chalk.hex(hexColor)(element));
