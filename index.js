@@ -15,6 +15,12 @@ const hexColor = randomColor({
   hue: process.argv[2],
   luminosity: process.argv[3],
 });
+/* if (process.argv[2] && process.argv[3]) {
+  hexCode = randomColor({ hue: color, luminosity: saturated });
+} else if (process.argv[2]) {
+  hexCode = randomColor({ hue: color });
+} else {
+  hexCode = randomColor();*/
 
 const element = `  ################################
   ################################
